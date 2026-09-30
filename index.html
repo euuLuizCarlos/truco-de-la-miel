@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Presentación Especial - Protocolo Neurohoney</title>
+
+  <style>
+    :root {
+      --bg-principal: #0d1117;
+      --bg-card: #161b22;
+      --border-color: #30363d;
+      --text-main: #f0f6fc;
+      --text-muted: #8b949e;
+      --offer-gold: #f59e0b;
+      --accent-green: #22c55e;
+      --accent-red: #ef4444;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background-color: var(--bg-principal);
+      color: var(--text-main);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding-bottom: 50px;
+    }
+
+    /* Barra Superior de Alerta */
+    .top-bar {
+      width: 100%;
+      background-color: var(--accent-red);
+      color: #ffffff;
+      text-align: center;
+      padding: 8px 12px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Header */
+    header {
+      width: 100%;
+      max-width: 600px;
+      padding: 16px 20px 8px;
+      text-align: center;
+    }
+
+    .headline {
+      font-size: 1.25rem;
+      font-weight: 800;
+      line-height: 1.35;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+
+    .headline span {
+      color: var(--offer-gold);
+    }
+
+    .subheadline {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+      margin-bottom: 16px;
+    }
+
+    /* Contenedor del Vídeo */
+    main {
+      width: 100%;
+      max-width: 600px;
+      padding: 0 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .video-container {
+      width: 100%;
+      max-width: 400px;
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 2px solid var(--border-color);
+      background-color: var(--bg-card);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    }
+
+    /* Indicador de Personas Viendo */
+    .viewers-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 12px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .live-dot {
+      width: 8px;
+      height: 8px;
+      background-color: var(--accent-red);
+      border-radius: 50%;
+      animation: blink 1.2s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    /* SECCIÓN DE OFERTA CON DELAY (OCULTA INICIALMENTE) */
+    .cta-section {
+      display: none; /* Ativado dinamicamente aos 55 minutos */
+      width: 100%;
+      max-width: 450px;
+      margin-top: 24px;
+      text-align: center;
+      animation: fadeIn 0.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .cta-btn {
+      display: block;
+      width: 100%;
+      background-color: var(--accent-green);
+      color: #000000;
+      font-size: 1.1rem;
+      font-weight: 800;
+      padding: 18px 20px;
+      border-radius: 14px;
+      text-decoration: none;
+      text-transform: uppercase;
+      box-shadow: 0 8px 25px rgba(34, 197, 94, 0.4);
+      transition: transform 0.15s ease;
+    }
+
+    .cta-btn:active {
+      transform: scale(0.97);
+    }
+
+    .secure-text {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      padding: 0 20px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Alerta Superior -->
+  <div class="top-bar">
+    ⚠️ Debido a la alta demanda, esta presentación estará disponible solo hoy
+  </div>
+
+  <!-- Cabeçalho VSL -->
+  <header>
+    <h1 class="headline">
+      Revelado: El <span>Truco de la Miel</span> que activa la desintoxicación cerebral y revierte la pérdida de memoria en días
+    </h1>
+    <p class="subheadline">
+      Asegúrate de tener el sonido activado. La presentación comenzará a continuación.
+    </p>
+  </header>
+
+  <!-- Player de Vídeo VTurb Integrado -->
+  <main>
+    <div class="video-container">
+      <vturb-smartplayer id="vid-6abd101059c89f07c0a70be4" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;">
+        <div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 178.21782178217822% 0 0; z-index: 0; background-color: black;"></div>
+      </vturb-smartplayer>
+      <script type="text/javascript">
+        var s=document.createElement("script");
+        s.src="https://scripts.converteai.net/497f9c5e-1551-4725-907b-2d2c2ea2d657/players/6abd101059c89f07c0a70be4/v4/player.js";
+        s.async=!0;
+        document.head.appendChild(s);
+      </script>
+    </div>
+
+    <!-- Indicador de Pessoas Assistindo -->
+    <div class="viewers-box">
+      <div class="live-dot"></div>
+      <span id="viewerCount">1,842</span> personas están viendo este video ahora mismo
+    </div>
+
+    <!-- SEÇÃO DE COMPRA (APARECE EXATAMENTE AOS 55 MINUTOS = 3300 SEGUNDOS) -->
+    <div id="ctaBox" class="cta-section">
+      <!-- Substitua o link abaixo pelo seu link real de checkout -->
+      <a href="https://checkout.kashpay.com.br/checkout/SEU_LINK_DE_CHECKOUT" class="cta-btn" target="_blank" rel="noopener noreferrer">
+        ¡ QUIERO ASEGURAR MI ACCESO AL PROTOCOLO !
+      </a>
+      <div class="secure-text">
+        🔒 Pago 100% Seguro • Garantía de 180 Días • Acceso Inmediato por Correo
+      </div>
+    </div>
+  </main>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>© 2026 LCO Nexus Digital. Todos los derechos reservados.</p>
+    <p style="margin-top: 6px;">Este sitio web no está afiliado a Facebook ni a ningún ente de Meta Inc.</p>
+  </footer>
+
+  <!-- SCRIPT DE DELAY DE 55 MINUTOS -->
+  <script>
+    // 55 minutos exatos de pitch = 3300 segundos
+    const DELAY_IN_SECONDS = 3300;
+
+    // Prova Social Dinâmica
+    setInterval(() => {
+      const countSpan = document.getElementById('viewerCount');
+      let current = parseInt(countSpan.innerText.replace('.', '').replace(',', ''));
+      let change = Math.floor(Math.random() * 8) - 3; 
+      let newCount = current + change;
+
+      if (newCount < 1790) newCount = 1810;
+      if (newCount > 1950) newCount = 1925;
+
+      countSpan.innerText = newCount.toLocaleString('es-ES');
+    }, 3500);
+
+    // Lógica de Delay do Botão + Memória no Navegador do usuário
+    function checkCtaDisplay() {
+      if (localStorage.getItem('ctaShown_neurohoney') === 'true') {
+        document.getElementById('ctaBox').style.display = 'block';
+      } else {
+        setTimeout(() => {
+          document.getElementById('ctaBox').style.display = 'block';
+          localStorage.setItem('ctaShown_neurohoney', 'true');
+        }, DELAY_IN_SECONDS * 1000);
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', checkCtaDisplay);
+  </script>
+</body>
+</html>
